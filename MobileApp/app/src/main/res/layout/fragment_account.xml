@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/logged_in_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    android:background="@android:color/white">
+
+    <!-- Profile Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="16dp"
+        android:layout_marginBottom="6dp">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_profile"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="p_image"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Asad Ali"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                android:id="@+id/btn_view_edit_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/view_edit_profile_text"
+                android:textSize="14sp"
+                android:textColor="@android:color/holo_blue_dark"
+                android:clickable="true"
+                android:focusable="true"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Menu Items -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+
+        >
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/favoritesButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:clickable="true"
+            android:focusable="true"
+
+            >
+
+            <!-- Left Icon (Notification Icon) -->
+            <ImageView
+                android:id="@+id/fav_left_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_heart"
+
+                android:layout_marginEnd="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <!-- Right Icon (Cross Icon) -->
+            <ImageView
+                android:id="@+id/fav_right_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_right_angle"
+
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <!-- Settings Text (First TextView) -->
+            <TextView
+                android:id="@+id/fav_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Favorites and Saved"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toEndOf="@id/fav_left_icon"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/fav_d_text" />
+
+            <!-- Privacy Text (Second TextView) -->
+            <TextView
+                android:id="@+id/fav_d_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:text="All of your favorite products here"
+                android:textSize="12sp"
+                android:textColor="@color/colorGray01"
+
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toEndOf="@id/fav_left_icon"
+
+                app:layout_constraintTop_toBottomOf="@id/fav_text"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <View
+
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorGray02"
+        />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/publicProfileButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="16dp"
+
+            android:clickable="true"
+            android:focusable="true"
+            >
+
+            <!-- Left Icon (Notification Icon) -->
+            <ImageView
+                android:id="@+id/profile_left_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_eye"
+
+                android:layout_marginEnd="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <!-- Right Icon (Cross Icon) -->
+            <ImageView
+                android:id="@+id/profile_right_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_right_angle"
+
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <!-- Settings Text (First TextView) -->
+            <TextView
+                android:id="@+id/profile_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Public Profile"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toEndOf="@id/profile_left_icon"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/profile_d_text" />
+
+            <!-- Privacy Text (Second TextView) -->
+            <TextView
+                android:id="@+id/profile_d_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:text="See how other view your profile"
+                android:textSize="12sp"
+                android:textColor="@color/colorGray01"
+
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toEndOf="@id/profile_left_icon"
+
+                app:layout_constraintTop_toBottomOf="@id/profile_text"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <View
+
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorGray02"
+        />
+
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:paddingVertical="16dp"-->
+<!--            >-->
+
+<!--            &lt;!&ndash; Left Icon (Notification Icon) &ndash;&gt;-->
+<!--            <ImageView-->
+<!--                android:id="@+id/buy_left_icon"-->
+<!--                android:layout_width="24dp"-->
+<!--                android:layout_height="24dp"-->
+<!--                android:src="@drawable/ic_card"-->
+
+<!--                android:layout_marginEnd="20dp"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent" />-->
+
+<!--            &lt;!&ndash; Right Icon (Cross Icon) &ndash;&gt;-->
+<!--            <ImageView-->
+<!--                android:id="@+id/buy_right_icon"-->
+<!--                android:layout_width="24dp"-->
+<!--                android:layout_height="24dp"-->
+<!--                android:src="@drawable/ic_right_angle"-->
+
+<!--                android:layout_marginEnd="16dp"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent" />-->
+
+<!--            &lt;!&ndash; Settings Text (First TextView) &ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:id="@+id/buy_text"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Buy Discounted Packages"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textSize="16sp"-->
+<!--                android:textColor="@android:color/black"-->
+<!--                android:clickable="true"-->
+<!--                android:focusable="true"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                app:layout_constraintStart_toEndOf="@id/buy_left_icon"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                app:layout_constraintBottom_toTopOf="@id/buy_d_text" />-->
+
+<!--            &lt;!&ndash; Privacy Text (Second TextView) &ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:id="@+id/buy_d_text"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:paddingTop="4dp"-->
+<!--                android:text="Sell faster, more and at higher margins with packages"-->
+<!--                android:textSize="12sp"-->
+<!--                android:textColor="@color/colorGray01"-->
+<!--                android:clickable="true"-->
+<!--                android:focusable="true"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                app:layout_constraintStart_toEndOf="@id/buy_left_icon"-->
+
+<!--                app:layout_constraintTop_toBottomOf="@id/buy_text"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent" />-->
+
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+
+    <View
+
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorGray02"
+        />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/setting_Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            >
+
+            <!-- Left Icon (Notification Icon) -->
+            <ImageView
+                android:id="@+id/left_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_setting"
+
+                android:layout_marginEnd="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <!-- Right Icon (Cross Icon) -->
+            <ImageView
+                android:id="@+id/right_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_right_angle"
+
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <!-- Settings Text (First TextView) -->
+            <TextView
+                android:id="@+id/settings_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toEndOf="@id/left_icon"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/privacy_text" />
+
+            <!-- Privacy Text (Second TextView) -->
+            <TextView
+                android:id="@+id/privacy_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:text="Privacy and manage account"
+                android:textSize="12sp"
+                android:textColor="@color/colorGray01"
+
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toEndOf="@id/left_icon"
+
+                app:layout_constraintTop_toBottomOf="@id/settings_text"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@color/colorGray02"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/olx"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            />
+        <TextView
+            android:id="@+id/btn_help_support"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textStyle="bold"
+
+            android:text="Help Support"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:clickable="true"
+            android:focusable="true"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@color/colorGray02"
+        />
+
+    <!-- Logout Button -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_logout"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            />
+        <TextView
+            android:id="@+id/btn_auth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="Logout"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@android:color/holo_red_dark"
+            android:clickable="true"
+            android:focusable="true"/>
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="800dp"
+        android:layout_height="8dp"
+        android:background="@color/colorGray02"
+        />
+
+
+
+</LinearLayout>
+
+
+
+    <!-- Login Button -->
+<!--    <Button-->
+<!--        android:id="@+id/login_button"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Login"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:visibility="gone" />-->
+
+</RelativeLayout>
